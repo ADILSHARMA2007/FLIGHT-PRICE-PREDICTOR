@@ -27,14 +27,15 @@ env/
 Thumbs.db
 
 # Data files (large)
-data/raw/*.csv
 data/processed/*.csv
+!data/raw/clean_dataset.csv
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
-# Model files (large)
-models/*.pkl
-models/*.joblib
+# Model files (these are small enough for github)
+!models/*.pkl
+!models/*.joblib
+!models/.gitkeep
 !models/.gitkeep
 
 # Outputs
