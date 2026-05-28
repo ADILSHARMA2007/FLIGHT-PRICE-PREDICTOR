@@ -81,8 +81,17 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Data Requirements
-Due to file size constraints, the processed US dataset (`clean_dataset1.csv`) and Indian dataset (`clean_dataset.csv`) must be placed in the appropriate `data/` subdirectories prior to running the application.
+### 3. Data Requirements (Important!)
+Because the US flight dataset is massive (almost 500MB), it has been heavily compressed into an `.xz` archive so it can be hosted on GitHub. **You MUST extract this dataset before the application will run.**
+
+**To extract the dataset via terminal (Requires Python):**
+```bash
+python -c "import lzma, shutil; print('Extracting...'); shutil.copyfileobj(lzma.open('data/processed/clean_dataset1.csv.xz'), open('data/processed/clean_dataset1.csv', 'wb')); print('Done!')"
+```
+
+*Alternatively (Windows UI):* Right-click `data/processed/clean_dataset1.csv.xz`, select **7-Zip** (or any modern extractor), and click **Extract Here**.
+
+Once extracted, verify that `clean_dataset1.csv` is sitting in the `data/processed/` folder.
 
 ---
 
