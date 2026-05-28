@@ -608,7 +608,7 @@ else:
                 "count": len(similar),
             }
 
-# Predict Fare
+git add .# Predict Fare
 day_names = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
 if india_mode:
